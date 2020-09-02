@@ -18,3 +18,10 @@ For further information about minimap2 see here: https://github.com/lh3/minimap2
 Use BBMap's pileup.sh tool to calculate binned read coverage per location, binsize=1000 should work well for most genomes.
 
 `pileup.sh in=mapping.sam out=contig_coverage.txt basecov=basecoverage.txt binsize=1000 bincov=bincoverage.txt`
+
+For further information about bbmap see here: https://sourceforge.net/projects/bbmap/
+
+##### 3) Plot the coverage and decide on the collapsed region threshold
+
+
+##### 4) Run the Python script to get likely collapsed regions in your genome
