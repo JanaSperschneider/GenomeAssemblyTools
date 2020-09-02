@@ -25,6 +25,7 @@ For further information about bbmap see here: https://sourceforge.net/projects/b
 Use the supplied R script (Coverage.R) to plot the file bincoverage.txt and inspect the coverage plot.
 
 For example, see this plot here:
-![Coverageplot](https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png)
+
+<a href="url"><img src="https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png" align="left" height="12" width="12" ></a>
 
 ##### 4) Run the Python script to get likely collapsed regions in your genome
