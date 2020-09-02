@@ -26,7 +26,8 @@ Use the supplied R script (Coverage.R) to plot the file bincoverage.txt and insp
 
 For example, see this plot here:
 
-<a href="url"><img src="https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png" align="left" height="200" width="200" ></a>
+<a href="url"><img src="https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png" align="left" height="400" width="400" ></a>
 
+This assembly is mostly un-collapsed, with a strong haploid peak at 21x coverage. The 2x haploid peak can be seen at 42x coverage. Here, one would choose the midpoint at ~32x as the threshold for calling a genomic region collapsed.
 
 ##### 4) Run the Python script to get likely collapsed regions in your genome
