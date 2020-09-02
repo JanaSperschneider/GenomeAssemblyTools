@@ -38,7 +38,10 @@ Shown here is the output with the provided example example_bincoverage.txt file.
 `python CollapsedRegions.py example_bincoverage.txt 33 output.bed`
 
 `Read in coverage from a bincoverage file from pileup.sh`
+
 `Binsize that was used in pileup.sh: 1000`
+
 `34.760025 MB are collapsed == 34760025 bases.`
+
 `Read coverage cutoff for collapsed regions that was used: 33`
 
