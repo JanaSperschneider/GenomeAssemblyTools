@@ -26,6 +26,6 @@ Use the supplied R script (Coverage.R) to plot the file bincoverage.txt and insp
 
 For example, see this plot here:
 
-<a href="url"><img src="https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png" align="left" height="12" width="12" ></a>
+<a href="url"><img src="https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png" align="left" height="48" width="48" ></a>
 
 ##### 4) Run the Python script to get likely collapsed regions in your genome
