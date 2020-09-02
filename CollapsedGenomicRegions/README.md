@@ -41,3 +41,4 @@ Read in coverage from a bincoverage file from pileup.sh
 Binsize that was used in pileup.sh: 1000
 34.760025 MB are collapsed == 34760025 bases.
 Read coverage cutoff for collapsed regions that was used: 33`
+
