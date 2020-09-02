@@ -22,6 +22,9 @@ Use BBMap's pileup.sh tool to calculate binned read coverage per location, binsi
 For further information about bbmap see here: https://sourceforge.net/projects/bbmap/
 
 ##### 3) Plot the coverage and decide on the collapsed region threshold
+Use the supplied R script (Coverage.R) to plot the file bincoverage.txt and inspect the coverage plot.
 
+For example, see this plot here:
+![Coverageplot](https://github.com/JanaSperschneider/GenomeAssemblyTools/blob/master/CollapsedGenomicRegions/Coverage_Example.png)
 
 ##### 4) Run the Python script to get likely collapsed regions in your genome
