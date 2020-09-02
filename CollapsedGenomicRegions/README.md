@@ -40,5 +40,6 @@ Shown here is the output with the provided example example_bincoverage.txt file.
 ```Read in coverage from a bincoverage file from pileup.sh
 Binsize that was used in pileup.sh: 1000
 37.506025 MB are collapsed == 37506025 bases.
-Read coverage cutoff for collapsed regions that was used: 32```
+Read coverage cutoff for collapsed regions that was used: 32
+```
 
