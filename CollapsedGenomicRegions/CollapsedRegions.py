@@ -150,7 +150,11 @@ with open(OUTPUT, 'w') as f:
 						list_of_coverages.append(coverage)
 
 			average_coverage = round(sum(list_of_coverages)/len(list_of_coverages),2)
-			collapsed_bases.append(end-start+1) 
+			#collapsed_bases.append(end-start+1) 
+			
+			# This is more accurate, if a region is e.g. triple the coverage then add collapsed regions*3
+			times_coverage = average_coverage//COVERAGE_THRESHOLD
+			collapsed_bases.append(times_coverage *(end-start+1))
 			f.writelines(contig + '\t' + str(start-1) + '\t' + str(end) + '\t' + 'Read-coverage:' + str(average_coverage) + '\n')
 
 #--------------------------------------
