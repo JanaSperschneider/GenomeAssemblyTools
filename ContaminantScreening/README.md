@@ -35,3 +35,8 @@ Confirm this with a BLAST search against a mitochondrial database from NCBI (htt
 `blastn -query $genome -db MITO -dust yes -perc_identity 90.0 -outfmt "7 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore" | gawk '($3>=98.0 && $4>=50)||($3>=94.0 && $4>=100)||($3>=90.0 && $4>=200)' > mito.screen.txt`
 
 `cat mito.screen.txt | grep -v "^#" >> MITO_CONTIGS.txt`
+
+`cut -f1 MITO_CONTIGS.txt | sort | uniq -c | sort -nr | head`
+
+###### Remove the mitochondrial contig from the assembly and put into separate FASTA file.
+
