@@ -28,7 +28,7 @@ For further information about bbmap see here: https://sourceforge.net/projects/b
 ##### 2) Identify mitochondrial contig
 
 From the contig coverage table, the mitochondrial contig should be high coverage and also low in GC content.
-Confirm this with a BLAST search against a mitochondrial database from NCBI (https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/).
+Confirm this suspect contig as mitochondrial with a BLAST search against a mitochondrial database from NCBI (https://ftp.ncbi.nlm.nih.gov/refseq/release/mitochondrion/).
 
 `makeblastdb -in mitochondrion.1.1.genomic.fna -dbtype nucl -out MITO`
 
