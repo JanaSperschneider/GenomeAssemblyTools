@@ -60,6 +60,7 @@ for f in *.fasta
 ```
 
 A quick scan can identify if the top hits map to bacteria. For example, this one-liner would output contigs in a rust fungal assembly that are likely to be contaminants:
+Cross-check suspect contaminant contigs with the GC content and coverage from bbmap's output table produced in step 1. 
 
 ```grep -E -m1 -v 'Puccinia|Phakopsora|psidii|Melamps|Uromyces|ribosomal' *_contig.screen.txt```
 
