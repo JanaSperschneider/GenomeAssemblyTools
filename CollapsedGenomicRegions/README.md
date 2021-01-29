@@ -14,7 +14,7 @@ For Nanopore reads use:
 
 For further information about minimap2 see here: https://github.com/lh3/minimap2
 
-##### 2) Map long reads back to the assembly 
+##### 2) Get long-read coverage from mapped reads
 Use BBMap's pileup.sh tool to calculate binned read coverage per location, binsize=1000 should work well for most genomes.
 
 `pileup.sh in=mapping.sam out=contig_coverage.txt basecov=basecoverage.txt binsize=1000 bincov=bincoverage.txt`
