@@ -23,7 +23,7 @@ Use BBMap's pileup.sh tool to calculate read coverage and GC content per contig.
 `pileup.sh in=mapping.sam out=contig_coverage.txt`
 For further information about bbmap see here: https://sourceforge.net/projects/bbmap/
 
-###### From the contig coverage table, one can now identify very low-coverage contigs (e.g. < 2x coverage) and remove those from the assembly.
+**From the contig coverage table, one can now identify very low-coverage contigs (e.g. < 2x coverage) and remove those from the assembly.**
 
 ##### 2) Identify mitochondrial contig
 
@@ -38,5 +38,33 @@ Confirm this suspect contig as mitochondrial with a BLAST search against a mitoc
 
 `cut -f1 MITO_CONTIGS.txt | sort | uniq -c | sort -nr | head`
 
-###### Remove the mitochondrial contig from the assembly and put into separate FASTA file.
+**Remove the mitochondrial contig from the assembly and put into separate FASTA file.**
+
+##### 3) Identify contaminant contigs
+
+Run a BLAST search for all your contigs and record the hits. 
+
+```o="_contig.screen.txt"
+for f in *.fasta
+	do
+		n=$(basename $f)
+		echo $n
+		FILE=$n$o
+		if [ -f "$FILE" ]; then
+		    echo "$FILE exists."
+		else 
+		    echo "$FILE does not exist."
+		    blastn -query $f -db nt -evalue 1e-5 -perc_identity 75 -outfmt "6 -qseqid sseqid pident length evalue bitscore sgi sacc staxids sscinames scomnames stitle" > $FILE
+		fi	
+	done
+```
+
+A quick scan can identify if the top hits map to bacteria. For example, this one-liner would output contigs in a rust fungal assembly that are likely to be contaminants:
+
+```grep -E -m1 -v 'Puccinia|Phakopsora|psidii|Melamps|Uromyces|ribosomal' *_contig.screen.txt```
+
+**Remove the contaminant contigs from the assembly.**
+
+
+
 
